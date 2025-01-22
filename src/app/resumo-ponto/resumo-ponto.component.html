@@ -1,0 +1,38 @@
+<div class="resumo-ponto-container">
+    <div class="filtros">
+      <label for="mes">Mês:</label>
+      <select id="mes" [(ngModel)]="selectedMes" (change)="onChangeMes()">
+        <option *ngFor="let mes of meses" [value]="mes.value">{{ mes.label }}</option>
+      </select>
+  
+      <label for="ano">Ano:</label>
+      <select id="ano" [(ngModel)]="selectedAno" (change)="onChangeAno()">
+        <option *ngFor="let ano of anos" [value]="ano">{{ ano }}</option>
+      </select>
+    </div>
+  
+    <div class="carga-horaria">
+      <p>Carga Horária Mensal: {{ cargaHorariaMensal }} horas</p>
+      <p>Carga Horária Diária: {{ cargaHorariaDiaria }} horas</p>
+    </div>
+  
+    <table class="tabela-resumo">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Entrada</th>
+          <th>Saída</th>
+          <th>Total de Horas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let registro of registros">
+          <td>{{ registro.data }}</td>
+          <td>{{ registro.entrada }}</td>
+          <td>{{ registro.saida }}</td>
+          <td>{{ registro.totalHoras }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

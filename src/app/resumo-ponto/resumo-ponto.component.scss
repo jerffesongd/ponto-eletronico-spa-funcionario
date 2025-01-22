@@ -1,0 +1,30 @@
+.resumo-ponto-container {
+    padding: 20px;
+  }
+  
+  .filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .carga-horaria {
+    margin-bottom: 20px;
+  }
+  
+  .tabela-resumo {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabela-resumo th,
+  .tabela-resumo td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .tabela-resumo th {
+    background-color: #f4f4f4;
+  }
+  
